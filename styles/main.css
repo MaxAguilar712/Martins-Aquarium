@@ -1,0 +1,106 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* COLORS and FONTS */
+
+
+body {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    line-height: 3;
+}
+header {
+    border-style: inset;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:  rgb(21, 85, 249) 2px 2px;
+    font-size: larger;
+    color:rgb(67, 183, 249);
+    background-image: url(https://www.revivedwater.eu/sites/default/files/styles/col_/public/2017-08/krystian-tambur-101317.jpg?itok=3_-Ct8kV);
+    
+}
+main {
+    border-style:inset;
+    font-size: xx-large;
+    color:rgb(247, 238, 247);
+    text-shadow:  rgb(147, 12, 138) 2px 2px;
+    background-image: url(https://t4.ftcdn.net/jpg/01/13/63/63/360_F_113636383_PGTfoDy9DQp8ksHR79Jw1VwPGIrCQHQg.jpg);
+
+ 
+}
+footer {
+    background: blue;
+}
+.left-sidebar {
+    background: rgb(44, 44, 186);
+}
+.right-sidebar {
+    background: rgb(44, 44, 186);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.fishInfo{
+    display: flex;
+    justify-content: center;
+
+}
+
+#fishGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    width:75%;
+    height:auto;
+    list-style-type: none
+}
+li img{
+    width:75%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+}
+a {
+    text-shadow: rgb(21, 85, 249) 2px 2px ;
+    color: white;
+}
+a:link {
+    text-shadow: rgb(21, 85, 249) 2px 2px ;
+    color: white;
+  }
+
+
+@media all and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;    
+    } 
+    header, 
+    footer {
+        width: 100%;
+    }
+    main {
+        flex: 2;
+        order: 2;
+        min-height: 135vh;
+        min-width: 150vh;
+    }
+    
+    .left-sidebar {
+        order: 1;
+        flex: 1;
+    }
+    .right-sidebar {
+        flex: 1;
+        order: 3;
+    }
+    footer {
+        order: 4;
+    }
+}
