@@ -1,49 +1,23 @@
-const database = {
-    fish1: [
-        {
-            name: "Bob",
-            food: "Crustaceans",
-            size: "12 inches",
-            type: "Psychrolutidae",
-        }
-    ], 
-    fish2: [
-        {
-            name: "Angela",
-            food: "Turtle",
-            size: "37 inches",
-            type: "Actinopterygii",
-        }
-    ],
-    fish3: [
-        {
-            name: "Murray",
-            food: "Mollusks",
-            size: "5 feet",
-            type: "Muraenidae",
-        }
-    ], 
-    fish4: [
-        {
-            name: "Hammy",
-            food: "Worms",
-            size: "5 inches",
-            type: "Brachionichthyidae",
-        }
-    ], 
-    fish5: [
-        {
-            name: "Becky",
-            food: "Barbled DragonFish",
-            size: "4 inches",
-            type: "Gigantura chuni",
-        }
-    ], 
+import { getFish } from './database.js'
+
+const allFish = getFish()
+
+for (const singleFish of allFish) {
+    console.log(singleFish)
 }
 
-let article = document.getElementById("fish-information");
 
-let mySection = database.fish1;
+// Import the FishList function from the correct module
+import { FishList } from './Fishlist.js'
 
-article.innerHTML = mySection
-    
+/*
+    What is the CSS selector for the element where you
+    want to display the fish?
+
+    Use . for elements with a "class" attribute
+    Use # for elements with an "id" attribute
+ */
+const parentHTMLElement = document.querySelector(".fishyfish")
+
+
+parentHTMLElement.innerHTML = FishList()
